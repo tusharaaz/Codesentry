@@ -123,7 +123,7 @@ const App = () => {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-200 ${
+      className={`min-h-screen overflow-x-hidden transition-colors duration-200 ${
         darkMode
           ? "bg-[#0f0f11] text-white"
           : "bg-[#f4f4f5] text-zinc-900"
@@ -139,12 +139,7 @@ const App = () => {
 
       {/* Main */}
 
-      <main
-        className="main flex justify-between"
-        style={{
-          height: "calc(100vh - 60px)",
-        }}
-      >
+      <main className="main flex min-h-[calc(100vh-60px)] flex-col overflow-x-hidden overflow-y-auto lg:h-[calc(100vh-80px)] lg:flex-row lg:overflow-hidden">
 
         {/* Code Editor */}
 

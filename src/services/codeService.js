@@ -22,7 +22,8 @@ async function sendCodeRequest(
     });
   } catch (error) {
     throw new Error(
-      "Unable to connect to the review service."
+      "Unable to connect to the review service.",
+      { cause: error }
     );
   }
 
